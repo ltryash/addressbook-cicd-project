@@ -28,6 +28,7 @@ pipeline{
                 -Dsonar.projectName='sonarproject' \
                 -Dsonar.sources=src
                 -Dsonar.exclusions=**/*.java
+                -Dsonar.java.binaries=target/classes
                 """
               }
             }
