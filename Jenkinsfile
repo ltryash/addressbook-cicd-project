@@ -18,7 +18,7 @@ pipeline{
         }
         stage('Run Sonarqube') {
             environment {
-                scannerHome = tool 'SonarQubeScanner';
+                scannerHome = tool 'SonarQube';
             }
             steps {
               withSonarQubeEnv(credentialsId: 'sonarproject', installationName: 'SonarQubeScanner') {
