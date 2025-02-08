@@ -25,6 +25,7 @@ pipeline{
                 sh "${scannerHome}/bin/sonar-scanner"
               }
             }
+        }
         stage('qa of the code'){
             steps{
                 sh 'mvn pmd:pmd'
