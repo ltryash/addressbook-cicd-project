@@ -16,6 +16,15 @@ pipeline{
                 sh 'mvn test'
             }
         }
+        stage('Run Sonarqube') {
+            environment {
+                scannerHome = tool 'sonarproject';
+            }
+            steps {
+              withSonarQubeEnv(credentialsId: 'sonarproject', installationName: 'SonarQubeScanner') {
+                sh "${scannerHome}/bin/sonar-scanner"
+              }
+            }
         stage('qa of the code'){
             steps{
                 sh 'mvn pmd:pmd'
