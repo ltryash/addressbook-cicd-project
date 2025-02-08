@@ -27,7 +27,6 @@ pipeline{
                 -Dsonar.projectKey=sqp_246e6f6516fd51bab9b6cc5cacc13e67a84a9ce3 \
                 -Dsonar.projectName='sonarproject' \
                 -Dsonar.sources=src
-                -Dsonar.java.binaries=target/classes
                 """
               }
             }
